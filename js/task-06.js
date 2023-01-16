@@ -11,7 +11,7 @@
 // invalid, які ми вже додали у вихідні файли завдання.
 
 const textInput = document.getElementById("validation-input");
-const textLength = textInput.getAttribute("data-length");
+const textLength = Number(textInput.getAttribute("data-length"));
 
 textInput.addEventListener("blur", onInputBlur);
 
@@ -24,7 +24,7 @@ function removeСlass(nameClass) {
 }
 
 function onInputBlur(event) {
-  if (textInput.value.trim().length == textLength) {
+  if (textInput.value.length === textLength) {
     removeСlass("invalid");
     addClass("valid");
   } else {

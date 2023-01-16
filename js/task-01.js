@@ -10,10 +10,17 @@
 const numberList = document.querySelectorAll(".item");
 console.log("Number of categories:", numberList.length);
 
-for (const item of numberList) {
+// for (const item of numberList) {
+//   const nameItem = item.firstElementChild.textContent;
+//   console.log(`Category: ${nameItem}`);
+
+//   const categoriesList = item.querySelectorAll("li");
+//   console.log("Elements:", categoriesList.length);
+// }
+
+numberList.forEach((item) => {
   const nameItem = item.firstElementChild.textContent;
   console.log(`Category: ${nameItem}`);
-
-  const categoriesList = item.querySelectorAll("li");
-  console.log("Elements:", categoriesList.length);
-}
+  const categoriesList = item.lastElementChild;
+  console.log("Elements:", categoriesList.children.length);
+});

@@ -7,7 +7,8 @@ const inputRange = document.getElementById("font-size-control");
 const textOutput = document.getElementById("text");
 
 inputRange.addEventListener("input", onTextChange);
+textOutput.style.fontSize = `${inputRange.value}px`;
 
 function onTextChange(event) {
-  textOutput.style.fontSize = event.target.value + "px";
+  textOutput.style.fontSize = `${event.currentTarget.value}px`;
 }
