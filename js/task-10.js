@@ -37,16 +37,14 @@ buttonDestroy.addEventListener("click", destroyBoxes);
 
 function createBoxes(amount) {
   const arrayElement = [];
-  let sizeWidth = 30;
-  let sizeHeight = 30;
+  let size = 30;
   for (let i = 1; i <= amount; i += 1) {
     const listBoxes = document.createElement("div");
-    listBoxes.style.width = `${sizeWidth}px`;
-    listBoxes.style.height = `${sizeHeight}px`;
+    listBoxes.style.width = `${size}px`;
+    listBoxes.style.height = `${size}px`;
     listBoxes.style.backgroundColor = getRandomHexColor();
     arrayElement.push(listBoxes);
-    sizeWidth += 10;
-    sizeHeight += 10;
+    size += 10;
   }
   return collectionOfBoxes.append(...arrayElement);
 }
@@ -55,3 +53,20 @@ function destroyBoxes() {
   collectionOfBoxes.innerHTML = "";
   numberOfElements.value = "";
 }
+
+// function createBoxes(amount) {
+//   const arrayElement = [];
+//   let size = 30;
+//   for (let i = 1; i <= amount; i += 1) {
+//     const listBoxes = `<div width: ${size}px height: ${size}px background-color: ${getRandomHexColor()} ></div>`;
+//     size += 10;
+//     arrayElement.push(listBoxes);
+//   }
+//   let arrayEl = arrayElement.join("");
+//   return arrayEl;
+// }
+
+// collectionOfBoxes.insertAdjacentHTML(
+//   "beforeend",
+//   createBoxes(numberOfElements.value)
+// );
