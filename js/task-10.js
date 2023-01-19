@@ -58,15 +58,10 @@ function destroyBoxes() {
 //   const arrayElement = [];
 //   let size = 30;
 //   for (let i = 1; i <= amount; i += 1) {
-//     const listBoxes = `<div width: ${size}px height: ${size}px background-color: ${getRandomHexColor()} ></div>`;
-//     size += 10;
+//     const listBoxes = `<div style = 'width:${size}px; height:${size}px; background-color:${getRandomHexColor()}'></div>`;
 //     arrayElement.push(listBoxes);
+//     size += 10;
 //   }
-//   let arrayEl = arrayElement.join("");
-//   return arrayEl;
+//   let arrayNew = arrayElement.join("");
+//   collectionOfBoxes.insertAdjacentHTML("beforeend", arrayNew);
 // }
-
-// collectionOfBoxes.insertAdjacentHTML(
-//   "beforeend",
-//   createBoxes(numberOfElements.value)
-// );
